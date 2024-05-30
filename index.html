@@ -3,19 +3,133 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document test</title>
+	<title>Git and GitHub Usage Memo</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	<div id="bar">introduction</div>
-	<div id="blk">the test page of github pages.</div>
+<body onLoad="test();">
+	<!-- <div id="jpn">
+		<button id="engLink">to English</button>
+	</div>
+	<div id="eng">
+		<button id="jpnLink">日本語に切り替え</button>
+	</div> -->
+	<hr />
+	<div id="jpn">
+		<div id="section">
+			本書の目的
+		</div>
+		<div id="contents">
+			GitおよびGitHubの使い方をメモしておくためのサイトです。(自分の備忘録)</div>
+		</div>
+		<div id="section">
+			コマンド
+		</div>
+		<div id="contents">
+			<table border="1">
+				<th>コマンド</th><th>説明</th><th>備考</th>
+				<tr>
+					<td>git init</td><td>リポジトリの初期化</td><td>新規作成時</td>
+				</tr>
+				<tr>
+					<td>git clone &lt;github URL&gt; [作成するディレクトリ名]</td><td>リポジトリの複製</td><td>既存リポジトリの取得時</td>
+				</tr>
+				<tr>
+					<td>git add &lt;ファイル名&gt;</td><td>ファイルの追加</td><td>変更ファイルのステージング</td>
+				</tr>
+				<tr>
+					<td>git commit [-m "&lt;コミットメッセージ&gt;"]</td><td>変更のコミット</td><td>ステージングしたファイルのコミット</td>
+				</tr>
+				<tr>
+					<td>git log</td><td>コミット履歴の確認</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git log --oneline</td><td>コミット履歴の簡易表示</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git branch</td><td>作業ブランチの確認</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git branch &lt;ブランチ名&gt;</td><td>新規ブランチの作成</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git checkout &lt;ブランチ名&gt;</td><td>作業ブランチの切り替え</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git push &lt;リモートリポジトリ名&gt; &lt;ローカルリポジトリ名&gt;</td><td>リモート(github)へのプッシュ</td><td>ローカルの変更をリモートに反映</td>
+				</tr>
+				<tr>
+					<td>git pull &lt;リモートリポジトリ名&gt; &lt;ローカルリポジトリ名&gt;</td><td>リモート(github)からのプル</td><td>リモートの変更をローカルに反映</td>
+				</tr>
+				<tr>
+					<td>git status</td><td>ステータスの確認</td><td>ファイル変更の有無を確認</td>
+				</tr>
+				<tr>
+					<td>git diff [ファイル名]</td><td>変更箇所の確認</td><td>ファイル内変更箇所の確認</td>
+				</tr>
+				<tr>
+					<td>フォーク</td><td>リポジトリの複製</td><td>他のユーザーのリポジトリを複製</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
-	<div id="foo">■↓ホームページをクリック</div>
-	<a href="https://www.trainocate.co.jp/">ホームページ</a>
-	<br/>
-
-	<div id="blk">■↓ボタンを押すとJavaScriptが動きます。</div>
-	<button id="baz">ボタン</button>
+	<!-- <div id="eng">
+		<div id="section">
+			Purpose of this Document</div>
+		<div id="contents">
+			This is a website for memoizing the usage of Git and GitHub. (My personal notes)</div>
+		</div>
+		<div id="section">
+			Commands
+		</div>
+		<div id="contents">
+			<table border="1">
+				<th>Command</th><th>Description</th><th>Remarks</th>
+				<tr>
+					<td>git init</td><td>Initialize a repository</td><td>When creating a new repository</td>
+				</tr>
+				<tr>
+					<td>git clone &lt;github URL&gt; [directory name]</td><td>Clone a repository</td><td>When retrieving an existing repository</td>
+				</tr>
+				<tr>
+					<td>git add</td><td>Add files</td><td>Stage changed files</td>
+				</tr>
+				<tr>
+					<td>git commit [-m "&lt;commit message&gt;"]</td><td>Commit changes</td><td>Commit staged files</td>
+				</tr>
+				<tr>
+					<td>git log</td><td>View commit history</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git log --oneline</td><td>View simplified commit history</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git branch</td><td>View working branches</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git branch &lt;branch name&gt;</td><td>Create a new branch</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git checkout &lt;branch name&gt;</td><td>Switch working branch</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git push &lt;remote repository name&gt; &lt;local repository name&gt;</td><td>Push to remote (GitHub)</td><td>Reflect local changes to remote</td>
+				</tr>
+				<tr>
+					<td>git pull &lt;remote repository name&gt; &lt;local repository name&gt;</td><td>Pull from remote (GitHub)</td><td>Reflect remote changes to local</td>
+				</tr>
+				<tr>
+					<td>git status</td><td>Check status</td><td>Check for file changes</td>
+				</tr>
+				<tr>
+					<td>git diff [file name]</td><td>Check changes</td><td>Check changes within a file</td>
+				</tr>
+				<tr>
+					<td>Fork</td><td>Clone a repository</td><td>Clone another user's repository</td>
+				</tr>
+			</table>
+		</div>
+	</div> -->
 
 	<script src="index.js"></script>
 </body>

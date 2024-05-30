@@ -1,1 +1,1 @@
-# GitCourse7
+# Git and Github usage.
