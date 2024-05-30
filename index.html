@@ -7,12 +7,6 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body onLoad="test();">
-	<!-- <div id="jpn">
-		<button id="engLink">to English</button>
-	</div>
-	<div id="eng">
-		<button id="jpnLink">日本語に切り替え</button>
-	</div> -->
 	<hr />
 	<div id="jpn">
 		<div id="section">
@@ -37,6 +31,9 @@
 					<td>git add &lt;ファイル名&gt;</td><td>ファイルの追加</td><td>変更ファイルのステージング</td>
 				</tr>
 				<tr>
+					<td>git reset</td><td>ステージングのキャンセル</td><td>&nbsp;</td>
+				</tr>
+				<tr>
 					<td>git commit [-m "コミットメッセージ"]</td><td>変更のコミット</td><td>ステージングしたファイルのコミット</td>
 				</tr>
 				<tr>
@@ -50,6 +47,9 @@
 				</tr>
 				<tr>
 					<td>git branch &lt;ブランチ名&gt;</td><td>新規ブランチの作成</td><td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>git branch -d &lt;ブランチ名&gt;</td><td>ブランチの削除</td><td>&nbsp;</td>
 				</tr>
 				<tr>
 					<td>git checkout &lt;ブランチ名&gt;</td><td>作業ブランチの切り替え</td><td>&nbsp;</td>
@@ -73,70 +73,26 @@
 		</div>
 
 		<div id="section">
+			新規リモートリポジトリの登録
+		</div>	
+		<div id="contents">
+			<ol>
+				<li>GitHubにログイン</li>
+				<li>Repositoriesタブをクリック</li>
+				<li>Newボタンをクリック</li>
+				<li>Repository nameにリポジトリ名を入力</li>
+				<li>Public or Privateを選択</li>
+				<li>Create repositoryボタンをクリック</li>
+				<li>Quick setup にて新規か既存リポジトリの連携かを選択し、コマンドラインをコピーして実行</li>
+			</ol>
+		</div>
+
+		<div id="section">
 			図
 		</div>
 		<div id="contents">
 			<img src="GitFlow.png" alt="Git Flow" width="1024px" />
 		</div>
-	</div>
-
-	<!-- <div id="eng">
-		<div id="section">
-			Purpose of this Document</div>
-		<div id="contents">
-			This is a website for memoizing the usage of Git and GitHub. (My personal notes)</div>
-		</div>
-		<div id="section">
-			Commands
-		</div>
-		<div id="contents">
-			<table border="1">
-				<th>Command</th><th>Description</th><th>Remarks</th>
-				<tr>
-					<td>git init</td><td>Initialize a repository</td><td>When creating a new repository</td>
-				</tr>
-				<tr>
-					<td>git clone &lt;github URL&gt; [directory name]</td><td>Clone a repository</td><td>When retrieving an existing repository</td>
-				</tr>
-				<tr>
-					<td>git add</td><td>Add files</td><td>Stage changed files</td>
-				</tr>
-				<tr>
-					<td>git commit [-m "&lt;commit message&gt;"]</td><td>Commit changes</td><td>Commit staged files</td>
-				</tr>
-				<tr>
-					<td>git log</td><td>View commit history</td><td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>git log --oneline</td><td>View simplified commit history</td><td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>git branch</td><td>View working branches</td><td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>git branch &lt;branch name&gt;</td><td>Create a new branch</td><td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>git checkout &lt;branch name&gt;</td><td>Switch working branch</td><td>&nbsp;</td>
-				</tr>
-				<tr>
-					<td>git push &lt;remote repository name&gt; &lt;local repository name&gt;</td><td>Push to remote (GitHub)</td><td>Reflect local changes to remote</td>
-				</tr>
-				<tr>
-					<td>git pull &lt;remote repository name&gt; &lt;local repository name&gt;</td><td>Pull from remote (GitHub)</td><td>Reflect remote changes to local</td>
-				</tr>
-				<tr>
-					<td>git status</td><td>Check status</td><td>Check for file changes</td>
-				</tr>
-				<tr>
-					<td>git diff [file name]</td><td>Check changes</td><td>Check changes within a file</td>
-				</tr>
-				<tr>
-					<td>Fork</td><td>Clone a repository</td><td>Clone another user's repository</td>
-				</tr>
-			</table>
-		</div>
-	</div> -->
 
 	<script src="index.js"></script>
 </body>
